@@ -16,7 +16,7 @@ tokenizer = BertTokenizer.from_pretrained(MODEL_NAME)
 x = "text"
 y = "code"
 df = pd.read_csv(
-    "/data1/ohnishi/202271month_per_hour_geotaged_adGeocode_undersampled.csv"
+    "/home/is/shuntaro-o/dev/persons_move_analysis/data/202271month_per_hour_geotaged_adGeocode_Tokyo.csv"
 )
 df_train, df_val, df_test, num_class = Data_pre(df, x, y)
 dataloader_train = Dataloader(df_train, x, y, batch)
