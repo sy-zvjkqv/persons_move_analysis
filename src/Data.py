@@ -14,9 +14,6 @@ def Data_pre(df,x,y):
     index_test = int(len(df) * 0.1)
     L = LabelEncoder()
     df[y] = L.fit_transform(df[y])
-    df_train[y] = L.transform(df_train[y])
-    df_test[y] = L.transform(df_test[y])
-    df_val[y] = L.transform(df_val[y])
     df[x] = df[x].astype(str)
     df[x]=df[x].astype(str)
     df[x] = df[x].str.replace(r'[【】]', ' ')       # 【】の除去
