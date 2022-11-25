@@ -7,4 +7,5 @@ overvs geotagged dates
   
 2022101month_per_hour_noGeo.csv is 1month datas.    500tweets/1hour every hour. Not geotaged data. query='(あ OR い 中略 を OR ん)lang:ja'  
 202210Tokyostation.csv　is 1month datas. 100tweets/1hour every hour.　query='lang:jabounding_box:[139.75 35.66 139.875 35.75]'  
-202271month_per_hour_in_disaster.csv is 1month datas. 100tweets/1hour every hour. 大雨が2022/7にあった    query='lang:jabounding_box:[139.75 35.66 139.875 35.75]'
+202271month_per_hour_in_disaster.csv is 1month datas. 100tweets/1hour every hour.  
+大雨が2022/7にあった    query='lang:jabounding_box:[139.75 35.66 139.875 35.75]'

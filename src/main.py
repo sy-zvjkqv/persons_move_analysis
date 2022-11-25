@@ -1,21 +1,24 @@
 import model
 from Data import Data_pre, Dataloader
 import os
+
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 import tensorflow as tf
 import pytorch_lightning as pl
 from transformers import BertTokenizer
 import pandas as pd
 
 MODEL_NAME = "cl-tohoku/bert-base-japanese-whole-word-masking"
-batch = 4
+batch = 2
 tokenizer = BertTokenizer.from_pretrained(MODEL_NAME)
 
 x = "text"
 y = "code"
-df = pd.read_csv("/data1/ohnishi/202271month_per_hour_geotaged_adGeocode_undersampled.csv")
-df_train, df_val, df_test, num_class = Data_pre(df,x,y)
+df = pd.read_csv(
+    "/data1/ohnishi/202271month_per_hour_geotaged_adGeocode_undersampled.csv"
+)
+df_train, df_val, df_test, num_class = Data_pre(df, x, y)
 dataloader_train = Dataloader(df_train, x, y, batch)
 dataloader_val = Dataloader(df_val, x, y, batch)
 dataloader_test = Dataloader(df_test, x, y, batch)

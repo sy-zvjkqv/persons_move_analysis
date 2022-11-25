@@ -4,7 +4,7 @@ import torch
 import pytorch_lightning as pl
 
 MODEL_NAME = "cl-tohoku/bert-base-japanese-whole-word-masking"
-batch = 1
+batch = 2
 
 
 class BertForSequenceClassifier_pl(pl.LightningModule):
